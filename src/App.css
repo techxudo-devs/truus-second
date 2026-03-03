@@ -1,0 +1,9 @@
+.transition-scribble {
+    color:"blue";
+    width: 120%;
+    height: 120%;
+    display: block;
+    position: absolute;
+    top: -5.5%;
+    left: -12%;
+}
