@@ -5,7 +5,6 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import star from "../assets/svgs/star.svg";
 import qrCode from "../assets/svgs/qr-code.svg";
 import twoLines from "../assets/svgs/two-lines.svg";
-import logo2 from "../assets/images/logo2.png";
 
 const workItems = [
   {
@@ -111,11 +110,13 @@ const Navbar = () => {
               src={star}
               alt=""
             />
-            <span
+            <Link
+              to="/work"
+              onClick={() => scrollTo(0, 0)}
               className={`${hover ? "text-black" : baseTextColor} z-50 relative font-extrabold max-md:text-3xl max-xl:text-4xl transition-all duration-200 ease-in-out text-3xl epilogue`}
             >
-              work
-            </span>
+              events
+            </Link>
             <motion.div
               animate={{
                 height: hover ? "auto" : 0,
@@ -166,7 +167,7 @@ const Navbar = () => {
           <Link to="/">
             <img
               className={`w-40 md:w-60 h-full ${navTheme === "dark" ? "logo-on-dark" : "logo-on-light"}`}
-              src={logo2}
+              src="/synclogo2.svg"
               alt="Truus"
             />
           </Link>

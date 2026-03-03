@@ -13,7 +13,7 @@ function AppLayout() {
     <>
       <ClickCursor />
       <Navbar />
-      <main className={pathname === '/' ? '' : 'pt-28'}>
+      <main className={pathname === '/' ? '' : pathname === '/work' ? 'pt-28 bg-black text-white' : 'pt-28'}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/work" element={<Work />} />

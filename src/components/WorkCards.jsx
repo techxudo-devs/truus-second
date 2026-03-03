@@ -1,4 +1,5 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { Share2, RotateCcw, Video, Palette, Globe } from "lucide-react";
 
@@ -8,8 +9,9 @@ import blueDoodle from "../assets/svgs/blue-d.svg";
 import pinkDoodle from "../assets/svgs/pink-d.svg";
 import arrowDoodle from "../assets/svgs/arrow-d.svg";
 import curlyDoodle from "../assets/svgs/curly-d.svg";
+import arrowDown from "../assets/svgs/arrow-d.svg";
 
-const cards = [
+const defaultCards = [
   {
     src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/68663be0740c68b890d87ff6_kfc-kipsalon-thumbnail.avif",
     brand: "douwe egberts",
@@ -39,7 +41,12 @@ const cards = [
   },
 ];
 
-const WorkCards = () => {
+const WorkCards = ({
+  title,
+  cards = defaultCards,
+  doodleSrc,
+  doodleClassName,
+}) => {
   const [canHover, setCanHover] = useState(() =>
     typeof window !== "undefined"
       ? window.matchMedia("(hover: hover) and (pointer: fine)").matches
@@ -174,23 +181,33 @@ const WorkCards = () => {
   return (
     <section
       data-navbar-theme="dark"
-      className="relative min-h-screen w-full bg-black text-white overflow-hidden px-4 md:px-8 pb-10"
+      className="relative  w-full bg-black text-white overflow-hidden px-4 md:px-8 pb-10"
     >
-      {/* <img src={orangeDoodle1} alt="" className="absolute left-0 bottom-0 w-40 md:w-56 pointer-events-none" /> */}
-      {/* <img src={orangeDoodle2} alt="" className="absolute left-6 bottom-8 w-24 md:w-32 pointer-events-none" /> */}
-      {/* <img src={blueDoodle} alt="" className="absolute right-4 top-20 w-16 md:w-24 pointer-events-none" /> */}
-      {/* <img src={pinkDoodle} alt="" className="absolute right-16 top-36 w-10 md:w-14 pointer-events-none" /> */}
-      <img
-        src={arrowDoodle}
-        alt=""
-        className="absolute right-10 bottom-32 w-16 md:w-24 pointer-events-none rotate-12"
-      />
-      {/* <img src={curlyDoodle} alt="" className="absolute left-1/2 -translate-x-1/2 top-8 w-14 md:w-20 pointer-events-none" /> */}
-
+      {doodleSrc ? (
+        <img
+          src={doodleSrc}
+          alt=""
+          className={
+            doodleClassName ||
+            "absolute left-35 bottom-0 w-40 md:w-70 pointer-events-none"
+          }
+        />
+      ) : null}
       <div className="max-w-7xl mx-auto pt-10">
-        <h1 className="text-3xl text-center epilogue font-extrabold">
-          let's take a look <br /> at some stuff!
-        </h1>
+        {title ? (
+          <>
+            {" "}
+            <img
+              src={arrowDown}
+              alt=""
+              className="mx-auto mt-2 w-10 md:w-40 pb-5 translate-x-30 rotate-20"
+            />
+            <h1 className="text-3xl text-center epilogue font-extrabold">
+              {title}
+            </h1>
+          </>
+        ) : null}
+
         <div
           ref={containerRef}
           className="relative min-h-[560px] lg:min-h-[680px] flex flex-col lg:flex-row justify-center items-center gap-4"
@@ -200,12 +217,17 @@ const WorkCards = () => {
             const Icon = tag?.icon;
 
             return (
-              <article
+              <motion.article
                 key={card.title}
                 ref={(el) => {
                   cardRefs.current[index] = el;
                 }}
                 className={`relative ${card.z} ${card.position} w-[300px] md:w-[340px] h-[500px] md:h-[560px] rounded-[28px] border-4 border-white overflow-hidden shadow-2xl`}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 24 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
               >
                 <img
                   src={card.src}
@@ -214,19 +236,19 @@ const WorkCards = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/10 to-black/55" />
 
-                <div className="absolute top-4 left-4 flex items-center gap-2 bg-[#938983] text-white text-base font-bold px-4 py-2 rounded epilogue">
+                <div className="absolute top-4 left-4 flex items-center gap-2 bg-white/10 backdrop-blur-md text-white text-base font-bold px-4 py-2 rounded epilogue">
                   {Icon && <Icon size={16} />}
                   {tag?.label || card.tag}
                 </div>
 
-                <div className="absolute bottom-[50px] left-1/2 -translate-x-1/2 bg-[#d59de8] text-black px-4 py-1.5 rounded-2xl text-base font-semibold dm-sans">
+                <div className="absolute bottom-[100px] left-1/2 -translate-x-1/2 bg-[#f4523a] text-black px-4 py-1.5 rounded-full text-base font-semibold dm-sans">
                   {card.brand}
                 </div>
 
-                <p className="absolute bottom-5 left-1/2 -translate-x-1/2 whitespace-pre-line text-center text-lg md:text-xl epilogue font-extrabold leading-none">
-                  {card.title}
-                </p>
-              </article>
+                <div className="absolute bottom-5 left-1/2 -translate-x-1/2 whitespace-pre-line text-center text-lg md:text-3xl epilogue font-extrabold ">
+                  <p>{card.title}</p>
+                </div>
+              </motion.article>
             );
           })}
         </div>

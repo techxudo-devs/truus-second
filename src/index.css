@@ -171,6 +171,22 @@ input[type="button"],
   }
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(12deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(12deg);
+  }
+  100% {
+    transform: translateY(0) rotate(12deg);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
 .popup{
   animation: popup cubic-bezier(0.075, 0.82, 0.165, 1);
 }

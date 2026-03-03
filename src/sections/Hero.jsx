@@ -1,5 +1,4 @@
 import React from 'react'
-import video from '../assets/videos/travel.mp4'
 import HeroText from '../components/HeroText'
 
 export default function Hero() {
@@ -7,7 +6,7 @@ export default function Hero() {
     <div data-navbar-theme="dark" className="h-screen w-full lg:p-4 flex justify-center items-center">
       <div className="relative h-full w-full">
         <video
-          src={video}
+          src="/crowd.mp4"
           autoPlay
           loop
           muted
