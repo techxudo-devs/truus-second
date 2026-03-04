@@ -13,6 +13,7 @@ import blueDoodle from '../assets/svgs/blue-doodle.svg';
 import smileySticker from '../assets/svgs/smile.svg';
 
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import AnimatedSvgPath from '../SvgComponents/AnimatedSvgPath';
 import { Carousel_002 } from '../components/Carosel_002';
 import Twolines from '../SvgComponents/Twolines';
@@ -157,8 +158,13 @@ const Projects = () => {
             </div>
 
             <div className='flex flex-col gap-2 items-center mb-6 mt-8'>
-
-                <p className='text-center text-white epilogue text-lg md:text-xl '>view project</p>
+                <Link
+                    to="/work"
+                    onClick={() => window.scrollTo(0, 0)}
+                    className='text-center text-white epilogue text-lg md:text-xl '
+                >
+                    View Events
+                </Link>
                 <Twolines className={"w-24"} color={"white"} />
             </div>
         </section>
