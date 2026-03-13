@@ -19,6 +19,7 @@ import RoundedArrow from '../SvgComponents/RoundedArrow';
 import LogoLoop from "../components/LogoLoop.jsx"
 import Popup from '../SvgComponents/Popup.jsx';
 
+
 // --- DATA FOR THE COLUMNS ---
 const column1Logos = [
     { name: 'Ace & Tate', src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/686bc299e71b345ff0fd4429_ace_tate_kigi.svg", bgColor: 'bg-gradient-to-br from-blue-400 to-blue-600' },
