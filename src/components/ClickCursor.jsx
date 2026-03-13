@@ -30,7 +30,7 @@ const ClickCursor = () => {
 
   return (
     <div ref={cursorRef} className={`click-cursor ${visible ? "is-visible" : ""}`}>
-      <span className="click-cursor__pill">click</span>
+      <span className="click-cursor__pill bg-[#2F214F]">click</span>
       <img className="click-cursor__icon" src="/cursor.svg" alt="" aria-hidden="true" />
     </div>
   );

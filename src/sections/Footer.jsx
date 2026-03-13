@@ -17,9 +17,9 @@ const Footer = () => {
     // Responsive padding on the main footer element
     <footer
       data-navbar-theme="light"
-      className="relative bg-[#F3EEE7] p-4 sm:p-6 md:p-8 h-screen"
+      className="relative bg-[#D7DFE9] p-4 sm:p-6 md:p-8 h-screen"
     >
-      <div className="relative bg-[#4169E1] text-white rounded-3xl w-full h-full p-6 md:p-8 overflow-hidden flex flex-col">
+      <div className="relative bg-[#2F214F] text-white rounded-3xl w-full h-full p-6 md:p-8 overflow-hidden flex flex-col">
         {/* --- Content Columns --- */}
         {/* Responsive grid gap and top margin */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 mt-8 md:mt-20">
@@ -125,7 +125,7 @@ const Footer = () => {
         {/* --- Credits Button --- */}
         {/* Responsive positioning */}
       </div>
-      <h3 className="md:text-lg text-center py-5">
+      {/* <h3 className="md:text-lg text-center py-5">
         Developed By{" "}
         <a
           href="https://techxudo.com"
@@ -134,7 +134,7 @@ const Footer = () => {
         >
           Techxudo
         </a>
-      </h3>
+      </h3> */}
     </footer>
   );
 };

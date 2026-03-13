@@ -22,7 +22,10 @@ const Carousel_002 = ({
     const css = `
   .Carousal_002 {
     padding-bottom: 50px !important;
-    overflow: "visible" !important;
+    overflow: visible !important;
+  }
+  .swiper-slide-shadow {
+    display: none !important;
   }
   `;
     return (
@@ -39,7 +42,7 @@ const Carousel_002 = ({
             <style>{css}</style>
 
             <Swiper
-                spaceBetween={spaceBetween}
+                // spaceBetween is ignored by "cards" effect, use cardsEffect instead
                 autoplay={
                     autoplay
                         ? {
@@ -49,6 +52,13 @@ const Carousel_002 = ({
                         : false
                 }
                 effect="cards"
+                // --- ADDED CONFIGURATION BELOW ---
+                cardsEffect={{
+                    perSlideOffset: 15, // Increases horizontal distance between cards
+                    perSlideRotate: 10, // Increases the rotation angle (fanning effect)
+                    slideShadows: false, // Removes the dark shadows between cards
+                }}
+                // ----------------------------------
                 grabCursor={false}
                 loop={loop}
                 pagination={
@@ -78,12 +88,10 @@ const Carousel_002 = ({
                                     src={image.src}
                                     alt={image.alt}
                                 />
-                                {/* Only render the title if it exists in the data */}
                                 {image.title && (
                                     <motion.p
                                         className="absolute w-full -bottom-[25%] md:-bottom-[12%] text-center text-white font-extrabold epilogue text-2xl  "
                                         initial={{ opacity: 0, y: 20 }}
-                                        // Animate based on the 'isActive' state
                                         animate={{
                                             opacity: isActive ? 1 : 0,
                                             y: isActive ? 0 : 20,
@@ -99,15 +107,12 @@ const Carousel_002 = ({
                                             src={image.sticker1}
                                             className="absolute w-28 bottom-28 -left-10 text-center text-white font-extrabold epilogue text-2xl  "
                                             initial={{ opacity: 0, scale: 0.5 }}
-                                            // Animate based on the 'isActive' state
                                             animate={{
                                                 opacity: isActive ? 1 : 0,
                                                 scale: isActive ? 1 : 0.5,
                                             }}
                                             transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1 }}
                                         />
-
-
                                     )
                                 }
                                 {
@@ -115,7 +120,6 @@ const Carousel_002 = ({
                                         <motion.div
                                             className="absolute  top-16 -right-10 md:-right-20 p-3 border-2 border-black text-xl rounded-md text-black  font-bold text-center epilogue  bg-[#F0EBE6]  "
                                             initial={{ opacity: 0, scale: 0.5 }}
-                                            // Animate based on the 'isActive' state
                                             animate={{
                                                 opacity: isActive ? 1 : 0,
                                                 scale: isActive ? 1 : 0.5,
@@ -124,14 +128,11 @@ const Carousel_002 = ({
                                         >
                                             {image.sticker2}
                                         </motion.div>
-
-
                                     )
                                 }
                             </>
                         )}
                     </SwiperSlide>
-                    // --- CHANGE ENDS HERE ---
                 ))}
                 {showNavigation && (
                     <div>

@@ -12,7 +12,7 @@ import React, { useEffect, useState } from 'react';
 // import logoSwapfiets from '../assets/logos/swapfiets.png';
 // import logoGetir from '../assets/logos/getir.png';
 // import logoAceTate from '../assets/logos/ace-tate.png';
-import cloud from "../assets/svgs/cloud.svg"
+import cloud from "../assets/svgs/cloud2.svg"
 import bts from "../assets/svgs/bts.svg"
 import roundarrow from "../assets/svgs/roundarrow.svg"
 import RoundedArrow from '../SvgComponents/RoundedArrow';
@@ -70,7 +70,7 @@ const ClientsMarquee = () => {
     }, []);
 
     return (
-        <section data-navbar-theme="light" className="relative max-w-7xl lg:pr-10 mx-auto min-h-screen bg-[#F3EEE7] flex items-center overflow-hidden">
+        <section data-navbar-theme="light" className="relative w-full px-10 lg:pr-10 min-h-screen bg-[#D7DFE9] flex items-center overflow-hidden">
             <div className="flex flex-col lg:flex-row justify-between items-center w-full ">
 
                 {/* --- Left Static Section --- */}
@@ -97,7 +97,7 @@ const ClientsMarquee = () => {
 
                 {/* --- Right Marquee Section --- */}
                 <div className="relative  h-[500px] flex gap-4 md:gap-6 overflow-hidden mask-image-gradient max-lg:hidden ">
-                    <div className='absolute top-0 h-24 w-full bg-gradient-to-b from-[#F3EEE7] to-transparent z-10'></div>
+                    <div className='absolute top-0 h-24 w-full bg-gradient-to-b from-[#D7DFE9] to-transparent z-10'></div>
                     {/* Column 1 (Scrolling Up) */}
                     <div className=" flex flex-col gap-3  animate-[marquee-up_5s_linear_infinite]">
                         {duplicatedCol1.map((item, index) => (
@@ -116,7 +116,7 @@ const ClientsMarquee = () => {
                             </div>
                         ))}
                     </div>
-                    <div className='absolute bottom-0 h-24 w-full bg-gradient-to-t from-[#F3EEE7] to-transparent z-10'></div>
+                    <div className='absolute bottom-0 h-24 w-full bg-gradient-to-t from-[#D7DFE9] to-transparent z-10'></div>
 
                 </div>
                 {!isDesktop &&

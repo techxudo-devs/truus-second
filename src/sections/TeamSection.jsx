@@ -20,8 +20,8 @@ import CurveLine from "../SvgComponents/CurveLine";
 import ArrowDown from "../SvgComponents/ArrowDown";
 import RoundedArrow from "../SvgComponents/RoundedArrow";
 import Popup from "../SvgComponents/Popup";
-import blob2 from "../assets/svgs/blob2.svg";
-import greenBlob from "../assets/svgs/greenBlob.svg";
+import blob2 from "../assets/svgs/blob3.svg";
+import greenBlob from "../assets/svgs/greenBlob2.svg";
 
 const singerImages = [
   "/singer/ali-zafar.webp",
@@ -156,11 +156,11 @@ const TeamSection = () => {
   return (
     <section
       data-navbar-theme="dark"
-      className="relative overflow-x-hidden bg-black text-white w-full  pt-20 px-8 flex flex-col items-center"
+      className="relative overflow-x-hidden bg-gradient-to-b from-[#D7DFE9] to-[#2F214F] text-white w-full  pt-10 px-8 flex flex-col items-center"
     >
       {/* --- Heading --- */}
       <div className="w-full max-w-5xl  text-center mb-24">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold epilogue  ">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold epilogue text-black">
           We represent{" "}
           <span className="relative inline-block w-32 md:w-[200px] lora italic font-light">
             {" "}
