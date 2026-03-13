@@ -252,7 +252,7 @@ const WorkCards = ({
                   {tag?.label || card.tag}
                 </div>
 
-                <div className="absolute bottom-[100px] left-1/2 -translate-x-1/2 bg-[#f4523a] text-black px-4 py-1.5 rounded-full text-base font-semibold dm-sans">
+                <div className="absolute bottom-[60px] left-1/2 -translate-x-1/2 bg-[#f4523a] text-black px-4 py-1.5 rounded-full text-base font-semibold dm-sans">
                   {card.brand}
                 </div>
 

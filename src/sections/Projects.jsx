@@ -49,7 +49,7 @@ const Projects = () => {
         {
             src: event1,
             alt: "Project image 1",
-            title: "Ferry",
+            title: "Port Grand - HAVI",
             subtitle: "netflix",
             sticker1: stickerGoodVibes,
             sticker2: "👍🏻 social"
@@ -57,7 +57,7 @@ const Projects = () => {
         {
             src: event2,
             alt: "Project image 2",
-            title: "KFC",
+            title: "Fam Fest - AFUSIC",
             subtitle: "kipsalon",
             sticker1: stickerHi,
             sticker2: "✨ 360"
