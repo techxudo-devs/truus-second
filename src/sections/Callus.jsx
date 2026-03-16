@@ -170,9 +170,9 @@ const Callus = () => {
 
     return (
         <section data-navbar-theme="light" className='pt-16 bg-gradient-to-b from-[#015696] to-[#00192b]'>
-            <h1 className='flex  lg:gap-5 justify-center text-center text-white font-extrabold epilogue text-4xl lg:text-7xl tracking-[-0.06em]'>
+            <h1 className='flex  lg:gap-5 justify-center text-center shadow-font text-white font-extrabold epilogue text-4xl lg:text-7xl tracking-[-0.06em]'>
                 call us if you
-                <p className='lora font-light'>
+                <p className='shadow-font'>
                     need
                     {/* <img className='w-36' src={twoLines} alt="" /> */}
                     <Twolines className={"w-20 lg:w-36"} />

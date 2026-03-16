@@ -160,9 +160,9 @@ const TeamSection = () => {
     >
       {/* --- Heading --- */}
       <div className="w-full max-w-5xl  text-center mb-24">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold epilogue text-white">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl shadow-font font-extrabold epilogue text-white">
           We represent{" "}
-          <span className="relative inline-block w-32 md:w-[200px] lora italic font-light">
+          <span className="relative inline-block w-32 md:w-[200px] shadow-font italic font-light">
             {" "}
             artists
             <AnimatedSvgPath
@@ -173,11 +173,11 @@ const TeamSection = () => {
                 },
               ]}
               viewBox={"0 0 201 86"}
-              color={"ffffff"}
+              color={"#ffffff"}
             />
           </span>
           , from rising stars to headline performers.{" "}
-          <span className="lora font-light italic">ready to shine!</span>
+          <span className="shadow-font font-light italic">ready to shine!</span>
         </h2>
       </div>
 

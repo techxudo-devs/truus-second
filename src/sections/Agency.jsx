@@ -7,14 +7,14 @@ import ZigzagLine from '../SvgComponents/ZigzagLine'
 export default function Agency() {
     return (
         <div data-navbar-theme="light" className='relative flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#015696] to-[#00192b]'>
-            <h1 className='max-w-7xl md:max-w-3xl mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-[900] text-white epilogue pb-6 sm:pb-8 lg:pb-10 leading-tight'>
+            <h1 className='max-w-7xl md:max-w-3xl mx-auto shadow-font text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-[900] text-white pb-6 sm:pb-8 lg:pb-10 leading-tight'>
                 From planning to execution
                 <br className='hidden sm:block' />
                 <span className='sm:hidden'> </span>
-                <span className='lora font-light mt-2 sm:mt-4 relative inline-block'>
+                <span className='mt-2 sm:mt-4 relative shadow-font inline-block'>
                     we handle it all.
                     <img
-                        className='absolute -top-1 sm:-top-2 lg:-top-10 right-0 sm:right-2 lg:-right-20 w-12 sm:w-16 md:w-20 lg:w-24 xl:w-28'
+                        className='absolute -top-1 sm:-top-2 lg:-top-10 right-0 sm:right-2 lg:-right-24 w-12 sm:w-16 md:w-20 lg:w-24 xl:w-28'
                         src={heart}
                         alt=""
                     />

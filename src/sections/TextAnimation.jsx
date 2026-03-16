@@ -113,7 +113,7 @@ const TextAnimation = () => {
 
                 <div className="flex items-center">
                     <div className="whitespace-nowrap flex gap-4 items-end">
-                        <h1  className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white epilogue relative">
+                        <h1  className="text-5xl sm:text-6xl lg:text-7xl shadow-font font-extrabold text-white tracking-wide relative">
                             Making Every Event Special.
 
                             <img
@@ -124,7 +124,7 @@ const TextAnimation = () => {
 
                             <img className='star absolute left-2/3 w-12 h-12 md:w-20 md:h-20 -bottom-2 md:-bottom-5 translate-y-8 md:translate-y-10' src={star} alt="" />
 
-                            <img className='phone absolute left-[90%] w-12 h-12 md:w-20 md:h-20 -top-2 md:-top' src={phone} alt="" />
+                            <img className='phone absolute left-[90%] w-12 h-12 md:w-20 md:h-20 -top-2 md:-top-20' src={phone} alt="" />
                         </h1>
 
                         {/* <div className='translate-y-8 md:translate-y-12'>

@@ -84,7 +84,7 @@ const Navbar = () => {
             className={`rounded-full p-5 sm:p-6 transition-all duration-300 mr-7 cursor-pointer hover:scale-110 ${
               isOpen
                 ? "bg-[#022c4d] text-white"
-                : "bg-[#035391] text-white"
+                : "bg-[#071c2d] text-white"
             }`}
           >
             <motion.div
@@ -191,7 +191,7 @@ const Navbar = () => {
         {/* MAIN BUTTON */}
         <button
           onClick={() => setIsSocialOpen(!isSocialOpen)}
-          className="relative z-[130] p-5 sm:p-6 rounded-full bg-[#022c4d] text-white flex items-center justify-center transition-transform duration-300 cursor-pointer hover:scale-105 active:scale-95"
+          className="relative z-[130] p-5 sm:p-6 rounded-full bg-[#071c2d] text-white flex items-center justify-center transition-transform duration-300 cursor-pointer hover:scale-105 active:scale-95"
         >
           <motion.div
             key={isSocialOpen ? "close" : "whatsapp"}
