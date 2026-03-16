@@ -109,7 +109,7 @@ const TextAnimation = () => {
     return (
         // THE FIX: Added h-screen and overflow-hidden to create a stable container for GSAP to pin.
         <div ref={main} className="w-full overflow-hidden bg-gradient-to-b from-[#2F214F] to-[#98A5CD]">
-            <section data-navbar-theme="light" className="relative justify-center h-screen w-full flex flex-col p-6">
+            <section data-navbar-theme="dark" className="relative justify-center h-screen w-full flex flex-col p-6">
 
                 <div className="flex items-center">
                     <div ref={wordContainerRef} className="whitespace-nowrap flex gap-4 items-end">
@@ -128,12 +128,12 @@ const TextAnimation = () => {
                         </h1>
 
                         <div className='translate-y-8 md:translate-y-12'>
-                            <ArrowDown className={"w-24 md:w-32"} color="#ffffff" />
+                            <ArrowDown className={"w-24 md:w-32"} color="#FFFFFF" />
                         </div>
                     </div>
                 </div>
 
-                <p className="max-w-lg text-base md:text-xl mx-auto text-center text-black z-10 mt-16 md:mt-24 dm-sans">
+                <p className="max-w-lg text-base md:text-xl mx-auto text-center text-white z-10 mt-16 md:mt-24 dm-sans">
                     We represent exceptional artists and produce unforgettable events across music, corporate, cultural, and private platforms.
                 </p>
             </section>

@@ -173,7 +173,7 @@ const TeamSection = () => {
                 },
               ]}
               viewBox={"0 0 201 86"}
-              color={"white "}
+              color={"#2F214F"}
             />
           </span>
           , from rising stars to headline performers.{" "}

@@ -80,7 +80,7 @@ const ClientsMarquee = () => {
                     <img className='absolute w-96 h-96 top-[30%] lg:top-[50%] -translate-y-1/2 left-0' src={cloud} alt="" />
 
                     <div className="relative z-20 text-center lg:translate-x-20 perspective-dramatic transform-3d">
-                        <h2 className="text-5xl md:text-6xl font-extrabold leading-tight">
+                        <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-white">
                             proud to have <br />
                             <b className="font-extrabold">worked</b><span className=' ml-2 lora font-light'>with:</span>
                         </h2>
