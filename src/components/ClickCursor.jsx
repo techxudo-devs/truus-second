@@ -29,8 +29,8 @@ const ClickCursor = () => {
   }, []);
 
   return (
-    <div ref={cursorRef} className={`click-cursor ${visible ? "is-visible" : ""}`}>
-      <span className="click-cursor__pill bg-[#1b0f36]">click</span>
+    <div ref={cursorRef} className={`click-cursor z-[999] ${visible ? "is-visible" : ""}`}>
+      <span className="click-cursor__pill bg-[#002744] z-[999]">click</span>
       <img className="click-cursor__icon" src="/cursor.svg" alt="" aria-hidden="true" />
     </div>
   );

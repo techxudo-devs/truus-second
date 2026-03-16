@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import './App.css'
-import Navbar from './components/Navbar'
+// import Navbar from './components/Navbar'
+import Navbar from './components/Navbar2'
 import ClickCursor from './components/ClickCursor'
 import Home from './pages/Home'
 import Work from './pages/Work'

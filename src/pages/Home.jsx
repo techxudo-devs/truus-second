@@ -6,11 +6,12 @@ import Projects from "../sections/Projects";
 import Callus from "../sections/Callus";
 import ClientsMarquee from "../sections/ClientMarquee";
 import TeamSection from "../sections/TeamSection";
+import Hero2 from "../sections/Hero2";
 
 export default function Home() {
   return (
     <div>
-      <Hero />
+      <Hero2 />
       <TextAnimation />
       <Agency />
       <Projects />
