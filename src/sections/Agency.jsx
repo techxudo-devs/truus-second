@@ -21,7 +21,7 @@ export default function Agency() {
                 </span>
                 <div className='mt-4 sm:mt-6 lg:mt-8 flex justify-center'>
                     <ZigzagLine
-                        color={"#000"}
+                        color={"#fff"}
                         width={Math.min(650, window.innerWidth * 0.8)}
                         className="mx-auto max-w-full"
                     />
