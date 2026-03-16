@@ -90,7 +90,7 @@ const Carousel_002 = ({
                                 />
                                 {image.title && (
                                     <motion.p
-                                        className="absolute w-full -bottom-[25%] md:-bottom-[12%] text-center text-black font-extrabold epilogue text-2xl  "
+                                        className="absolute w-full -bottom-[25%] md:-bottom-[12%] text-center text-white font-extrabold epilogue text-2xl  "
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{
                                             opacity: isActive ? 1 : 0,

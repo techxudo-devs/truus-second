@@ -124,7 +124,7 @@ const TextAnimation = () => {
 
                             <img className='star absolute left-2/3 w-12 h-12 md:w-20 md:h-20 -bottom-2 md:-bottom-5 translate-y-8 md:translate-y-10' src={star} alt="" />
 
-                            <img className='phone absolute left-[90%] w-12 h-12 md:w-20 md:h-20 -top-2 md:-top-5' src={phone} alt="" />
+                            <img className='phone absolute left-[90%] w-12 h-12 md:w-20 md:h-20 -top-2 md:-top-20' src={phone} alt="" />
                         </h1>
 
                         {/* <div className='translate-y-8 md:translate-y-12'>

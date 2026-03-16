@@ -20,7 +20,7 @@ const AnimatedSvgPath = ({
     paths,
     viewBox,
     width = "",
-    color = "#fff",
+    color = "#ffffff",
     strokeWidth = 2,
     className = ""
 }) => {

@@ -164,11 +164,11 @@ const Projects = () => {
                 <Link
                     to="/work"
                     onClick={() => window.scrollTo(0, 0)}
-                    className='text-center text-black epilogue text-lg md:text-xl '
+                    className='text-center text-white epilogue text-lg md:text-xl '
                 >
                     View Events
                 </Link>
-                <Twolines className={"w-24"} color={"black"} />
+                <Twolines className={"w-24"} color={"white"} />
             </div>
         </section>
     );

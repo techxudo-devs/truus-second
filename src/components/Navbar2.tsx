@@ -67,13 +67,13 @@ const Navbar = () => {
   return (
     <>
       {/* HEADER LOGO & MENU BUTTON */}
-      <div className="absolute left-0 top-0 z-[100] w-full bg-transparent pointer-events-none -mt-16 pl-4">
+      <div className="absolute left-0 top-0 z-[100] w-full bg-transparent pointer-events-none -mt-8 lg:-mt-16 pl-4">
         <div className="flex items-center justify-between pointer-events-auto mt-5">
           <div>
             <Link to={"/"}>
               <img
               loading="lazy"
-                className="w-50 sm:w-50 h-full -translate-y-4"
+                className="w-30 sm:w-50 h-full -translate-y-4"
                 src="/synclogo2.svg"
                 alt="Sync Logo"
               />

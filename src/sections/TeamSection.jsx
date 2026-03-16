@@ -160,7 +160,7 @@ const TeamSection = () => {
     >
       {/* --- Heading --- */}
       <div className="w-full max-w-5xl  text-center mb-24">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold epilogue text-black">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold epilogue text-white">
           We represent{" "}
           <span className="relative inline-block w-32 md:w-[200px] lora italic font-light">
             {" "}
@@ -173,7 +173,7 @@ const TeamSection = () => {
                 },
               ]}
               viewBox={"0 0 201 86"}
-              color={"1b0f36"}
+              color={"ffffff"}
             />
           </span>
           , from rising stars to headline performers.{" "}

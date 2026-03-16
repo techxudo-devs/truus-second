@@ -170,7 +170,7 @@ const Callus = () => {
 
     return (
         <section data-navbar-theme="light" className='pt-16 bg-[#015696]'>
-            <h1 className='flex  lg:gap-5 justify-center text-center font-extrabold epilogue text-4xl lg:text-7xl tracking-[-0.06em]'>
+            <h1 className='flex  lg:gap-5 justify-center text-center text-white font-extrabold epilogue text-4xl lg:text-7xl tracking-[-0.06em]'>
                 call us if you
                 <p className='lora font-light'>
                     need
@@ -201,13 +201,13 @@ const Callus = () => {
 
                             {/* Card Content */}
                             <div className="relative z-10 pointer-events-none">
-                                <h2 className="text-3xl font-extrabold mb-4 epilogue">{card.title}</h2>
+                                <h2 className="text-3xl font-extrabold mb-4 epilogue text-white">{card.title}</h2>
                                 <hr className="border-t-2 border-white/80 mb-4" />
                                 <ul className="space-y-1 text-lg dm-sans">
                                     {card.services.map((service, i) => (
                                         <li key={i} className="flex items-start gap-x-3">
-                                            <span className="mt-1 text-xs">◆</span>
-                                            <span>{service}</span>
+                                            <span className="mt-1 text-xs text-white ">◆</span>
+                                            <span className='text-white'>{service}</span>
                                         </li>
                                     ))}
                                 </ul>
