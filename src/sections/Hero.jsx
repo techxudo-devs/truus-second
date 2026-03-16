@@ -7,39 +7,49 @@ import heroFirstImg from "../assets/images/hero-first.webp"
 
 export default function Hero() {
   return (
-    // 1. Changed bg to match the dark silhouettes (#0B0C10 is the common dark shade in your inspo)
-    <div data-navbar-theme="dark" className="h-[150vh] w-full flex justify-center items-center bg-gradient-to-b from-[#8BA0C7] via-[#3F3C7B] to-[#0B0C10]">
-      <div className="relative h-full w-full overflow-hidden rounded-lg">
-        
-        {/* Layer 1: Background (First) - Aligned to top */}
-        <img 
-          src={heroFirstImg} 
-          alt="" 
-          className="absolute top-0 left-0 w-full h-[100vh] blur-[2px] pt-30 object-cover object-top z-0"
-        />
+    // 1. Container
+    <div className="relative h-screen w-full overflow-hidden bg-[#0B0C10]">
+      
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#8BA0C7] via-[#3F3C7B] to-[#0B0C10] z-0" />
 
-        {/* Layer 2: Middle Ground (Second) - Aligned to top */}
-        <img 
-          src={heroSecondImg} 
-          alt="" 
-          className="absolute top-0 left-0 w-full h-[100vh] pt-60 object-cover object-top z-10"
-        />
-
-        {/* Layer 3: Foreground Silhouettes (Dark) - Aligned to top */}
-        <img 
-          src={heroDarkImg} 
-          alt="" 
-          className="absolute top-0 left-0 w-full h-[190vh] pt-80 blur-sm object-cover object-top z-20"
-        />
-
-        {/* Text Content Layer - Positioned over the dark void */}
-        <div className="absolute inset-0 z-30 flex items-center justify-center px-6">
-          <div className="w-full mt-[20vh] lg:mt-[100vh]">
-            <HeroText />
-          </div>
+      {/* 2. TEXT CONTENT: Positioned clearly in the "sky" area, below the logo */}
+      <div className="absolute inset-0 z-50 flex flex-col items-center justify-start pt-[22vh] px-6">
+        <div className="w-full max-w-6xl text-center">
+          <HeroText />
         </div>
-
       </div>
+
+      {/* 3. THE CROWD LAYERS: All anchored to the bottom */}
+      
+      {/* Layer 1: Furthest away (Small/Blurry) */}
+      <img
+      loading='lazy'
+        src={heroFirstImg} 
+        alt="" 
+        className="absolute bottom-0 left-0 w-full h-[80vh] scale-[0.5] object-cover object-top opacity-50 blur-[4px] z-10"
+      />
+
+      {/* Layer 2: Middle ground */}
+      <img 
+      loading='lazy'
+        src={heroSecondImg} 
+        alt="" 
+        className="absolute bottom-0 left-0 w-full h-[70vh] scale-[0.7] pt-20 object-cover object-top z-20"
+      />
+
+      {/* Layer 3: Foreground (The Dark Silhouettes) */}
+      {/* We make this taller but push it down slightly with translate to match your "Goal" image */}
+      <img 
+      loading='lazy'
+        src={heroDarkImg} 
+        alt="" 
+        className="absolute bottom-0 left-0 w-full h-[75vh] pt-20 object-cover object-top blur-[5px] z-30 translate-y-[15%]"
+      />
+
+      {/* 4. Small Ground Fade - Reduced height so it doesn't hide the people */}
+      <div className="absolute bottom-0 left-0 w-full h-[15vh] bg-gradient-to-t from-[#0B0C10] to-transparent z-40" />
+
     </div>
   )
 }

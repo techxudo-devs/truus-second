@@ -1,6 +1,7 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Shadows+Into+Light&display=swap');
+@import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -16,6 +17,15 @@
 .lora{
     font-family: "Lora", serif;
 }
+
+.man{
+  font-family: "Manrope", sans-serif;
+}
+
+.shadow-font {
+  font-family: "Shadows Into Light", cursive;
+}
+
 body{
       cursor: url("./assets/svgs/cursor-default.svg") 2 0, auto;
 }
