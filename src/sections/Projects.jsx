@@ -168,7 +168,7 @@ const Projects = () => {
                 />
             </div>
 
-            <div className='flex flex-col gap-2 items-center mb-6 mt-8'>
+            <div className='flex flex-col gap-2 items-center mb-6 mt-20 sm:mt-8'>
                 <Link
                     to="/work"
                     onClick={() => window.scrollTo(0, 0)}
