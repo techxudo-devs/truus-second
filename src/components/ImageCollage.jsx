@@ -193,7 +193,7 @@ const ImageCollage = () => {
           ))}
         </div>
       </div>
-      <p className="dm-sans font-light text-white text-center max-w-xs sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto text-sm sm:text-base md:text-lg lg:text-xl lg:pt-10 px-2 sm:px-0 pb-8">
+      <p className="dm-sans font-light text-white text-center max-w-xs sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto text-sm sm:text-base md:text-lg lg:text-xl pt-24 lg:pt-10 px-2 sm:px-0 pb-8">
         We are a live entertainment company focused on producing concerts,
         public shows, and large-scale events. From securing talent to full-scale
         production, we bring vision, sound, and crowd energy together to create

@@ -13,7 +13,7 @@ const Hero2 = () => {
       />
       <div className="absolute inset-0 bg-black/70" />
       <div className="relative z-10 flex h-full w-full items-center justify-center">
-        <h1 className="text-white text-4xl sm:text-[5rem] md:text-[7rem] lg:text-[9rem] font-semibold leading-[0.95] shadow-font uppercase text-center">
+        <h1 className="text-white text-[2.5rem] sm:text-[5rem] md:text-[7rem] lg:text-[9rem] font-semibold leading-[0.95] shadow-font uppercase text-center">
           We Manage <br />{" "}
           <span className="shadow-font">Events & Artist</span>
         </h1>
