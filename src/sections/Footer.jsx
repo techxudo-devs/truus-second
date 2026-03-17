@@ -72,6 +72,12 @@ const Footer = () => {
               <a href="#" aria-label="TikTok">
                 <FaTiktok size={28} />
               </a>
+              <p className="text-right pl-6 text-xs man">
+                Powered By{" "}
+                <a className="font-semibold" href="https://techxudo.com/" target="_blank">
+                  Techxudo
+                </a>
+              </p>
             </div>
           </div>
         </div>
@@ -121,7 +127,6 @@ const Footer = () => {
             className="absolute bottom-10 right-[2%] w-20 sm:right-[5%] md:bottom-16 md:left-[80%] md:right-auto md:w-24 drop-shadow-[0_0_3px_rgba(255,255,255,0.7)]"
           />
         </div>
-
         {/* --- Credits Button --- */}
         {/* Responsive positioning */}
       </div>

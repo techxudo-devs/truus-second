@@ -20,8 +20,15 @@ import Twolines from '../SvgComponents/Twolines';
 
 import event1 from "../assets/images/event1.jpeg"
 import event2 from "../assets/images/event2.jpeg"
+import event3 from "../assets/images/poster.jpeg"
+import event5 from "../assets/images/event5.jpg"
+import event4 from "../assets/images/event4.jpg"
+import event6 from "../assets/images/event6.jpg"
 
 import video1 from "../assets/videos/video1.mp4"
+import video2 from "../assets/videos/video2.MP4"
+import video3 from "../assets/videos/video3.MP4"
+import video4 from "../assets/videos/video4.mp4"
 
 const Projects = () => {
     const cursorRef = useRef(null);
@@ -55,25 +62,31 @@ const Projects = () => {
             alt: "Project video 1",
         },
         {
-            src: event1,
-            alt: "Project image 1",
+            type: "video",
+            src: video3,
+            poster: event1,
+            hoverPlay: true,
+            alt: "Project video 2",
             title: "Port Grand - HAVI",
             subtitle: "netflix",
             sticker1: stickerGoodVibes,
             sticker2: "👍🏻 social"
         },
         {
-            src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/6866999038def993f6901d98_c4b0a4b3-aa91-4239-85ab-0d24b205d802.avif",
-            alt: "Project image 3",
-            title: "Squid Game",
+            type: "video",
+            src: video2,
+            poster: event5,
+            hoverPlay: true,
+            alt: "Project video 2",
+            title: "ILMA Uni - ASIM AZHAR",
             subtitle: "netflix",
             sticker1: stickerLetsGo,
             sticker2: "👍🏻 social"
         },
         {
-            src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/68668570b1d8971ed16d3beb_02.avif",
+            src: event6,
             alt: "Project image 4",
-            title: "Prime",
+            title: "PC Bhurban - ASIM AZHAR",
             subtitle: "campaign",
             sticker1: smileySticker,
             sticker2: "✨ 360"
@@ -111,24 +124,27 @@ const Projects = () => {
             sticker2: "✨ 360"
         },
         {
-            src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/68668570b1d8971ed16d3beb_02.avif",
+            src: event4,
             alt: "Project image 4",
-            title: "Prime",
+            title: "Performing Live - ASIM AZHAR",
             subtitle: "campaign",
             sticker1: stickerHands,
             sticker2: "👍🏻 social"
         },
         {
-            src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/686b959b09dca3375fba5ba4_1.avif",
+            src: event3,
             alt: "Project image 5",
-            title: "Hema",
+            title: "Asim Ali - Tour",
             subtitle: "socials",
             sticker1: stickerLetsGo,
             sticker2: "✨ 360"
         },
         {
-            src: event2,
-            alt: "Project image 2",
+            type: "video",
+            src: video4,
+            poster: event2,
+            hoverPlay: true,
+            alt: "Project video 3",
             title: "Fam Fest - AFUSIC",
             subtitle: "kipsalon",
             sticker1: stickerHi,
@@ -138,6 +154,7 @@ const Projects = () => {
 
     return (
         <section
+            id="projects"
             data-navbar-theme="dark"
             className="relative w-full bg-gradient-to-t from-[#015696] to-[#00192b] text-white overflow-hidden flex flex-col justify-center p-6 md:p-8 min-h-screen"
             onMouseMove={handleCursorMove}

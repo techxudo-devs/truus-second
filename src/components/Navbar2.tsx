@@ -56,13 +56,26 @@ const Navbar = () => {
   };
 
   const menuLinks = [
-    { name: "HOME", active: false },
-    { name: "AGENCY", active: true },
-    { name: "PROJECTS", active: false },
-    { name: "EXPERTISE", active: false },
-    { name: "FAQ", active: false },
-    { name: "CONTACT", active: false },
+    { name: "Home", id: "home", active: false },
+    { name: "About", id: "about", active: true },
+    { name: "Projects", id: "projects", active: false },
+    { name: "Services", id: "services", active: false },
+    { name: "Artists", id: "artists", active: false },
+    { name: "Works", id: "works", active: false },
+    // { name: "Contact", id: "contact", active: false },
   ];
+
+  const handleNavClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string,
+  ) => {
+    event.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    setIsOpen(false);
+  };
 
   return (
     <>
@@ -112,8 +125,8 @@ const Navbar = () => {
                 {menuLinks.map((link, idx) => (
                   <a
                     key={idx}
-                    href={`#${link.name.toLowerCase()}`}
-                    onClick={toggleMenu}
+                    href={`#${link.id}`}
+                    onClick={(event) => handleNavClick(event, link.id)}
                     className={`epilogue font-black text-[30px] sm:text-[4rem] lg:text-[3.5rem] leading-[0.5] uppercase transition-colors duration-300 hover:text-[#022c4d] ${
                       link.active ? "text-[#022c4d]" : "text-white"
                     }`}

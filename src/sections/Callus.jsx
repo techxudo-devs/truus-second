@@ -169,7 +169,7 @@ const Callus = () => {
 
 
     return (
-        <section data-navbar-theme="light" className='pt-10 sm:pt-16 bg-gradient-to-b from-[#015696] to-[#00192b]'>
+        <section id="services" data-navbar-theme="light" className='pt-10 sm:pt-16 bg-gradient-to-b from-[#015696] to-[#00192b]'>
             <h1 className='flex  lg:gap-5 justify-center text-center shadow-font text-white font-extrabold epilogue text-5xl sm:text-4xl lg:text-7xl tracking-[-0.06em]'>
                 call us if you
                 <p className='shadow-font'>

@@ -155,6 +155,7 @@ const TeamSection = () => {
 
   return (
     <section
+      id="artists"
       data-navbar-theme="dark"
       className="relative overflow-x-hidden bg-gradient-to-b from-[#00192b] to-[#015696] text-white w-full  pt-10 px-8 flex flex-col items-center"
     >

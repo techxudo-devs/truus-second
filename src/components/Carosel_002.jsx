@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
-import React from "react";
+import React, { useRef } from "react";
 import { Autoplay, EffectCards, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/effect-cards";
@@ -19,6 +19,33 @@ const Carousel_002 = ({
     spaceBetween = 40,
     ...rest
 }) => {
+    const videoRefs = useRef(new Map());
+
+    const handleVideoMouseEnter = (index) => {
+        const video = videoRefs.current.get(index);
+        if (!video) return;
+        video.muted = true;
+        video.loop = true;
+        const playPromise = video.play();
+        if (playPromise?.catch) {
+            playPromise.catch(() => {});
+        }
+    };
+
+    const handleVideoMouseLeave = (index) => {
+        const video = videoRefs.current.get(index);
+        if (!video) return;
+        video.pause();
+        try {
+            video.currentTime = 0;
+        } catch {
+            // Some browsers can throw if the video isn't ready yet.
+        }
+        // Reload to ensure the poster frame is shown again.
+        if (video.poster) {
+            video.load();
+        }
+    };
     const css = `
   .Carousal_002 {
     padding-bottom: 50px !important;
@@ -80,14 +107,37 @@ const Carousel_002 = ({
                 modules={[EffectCards, Autoplay, Pagination, Navigation]}
             >
                 {images.map((image, index) => (
-                    <SwiperSlide key={index} className="swiper-stack rounded-3xl relative border-4 border-white bg-white " >
+                    <SwiperSlide
+                        key={index}
+                        className="swiper-stack rounded-3xl relative border-4 border-white bg-white"
+                    >
                         {({ isActive }) => (
-                            <>
+                            <div
+                                className="h-full w-full"
+                                onMouseEnter={() => {
+                                    if (image.type === "video" && image.hoverPlay) {
+                                        handleVideoMouseEnter(index);
+                                    }
+                                }}
+                                onMouseLeave={() => {
+                                    if (image.type === "video" && image.hoverPlay) {
+                                        handleVideoMouseLeave(index);
+                                    }
+                                }}
+                            >
                                 {image.type === "video" ? (
                                     <video
+                                        ref={(el) => {
+                                            if (el) {
+                                                videoRefs.current.set(index, el);
+                                            } else {
+                                                videoRefs.current.delete(index);
+                                            }
+                                        }}
                                         className="h-full w-full object-cover rounded-3xl"
                                         src={image.src}
-                                        autoPlay
+                                        autoPlay={!image.hoverPlay}
+                                        poster={image.poster}
                                         muted
                                         loop
                                         playsInline
@@ -143,7 +193,7 @@ const Carousel_002 = ({
                                         </motion.div>
                                     )
                                 }
-                            </>
+                            </div>
                         )}
                     </SwiperSlide>
                 ))}
