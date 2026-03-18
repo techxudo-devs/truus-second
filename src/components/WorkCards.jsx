@@ -233,14 +233,14 @@ const WorkCards = ({
           transition={{ duration: 3, ease: "easeInOut", repeat: Infinity }}
         />
       ) : null}
-      <div className="max-w-7xl mx-auto pt-10">
+      <div className="max-w-7xl mx-auto pt-6 sm:pt-10">
         {title ? (
           <>
             {" "}
             <motion.img
               src={arrowDown}
               alt=""
-              className="mx-auto mt-2 w-10 md:w-40 pb-5 translate-x-30 rotate-20"
+              className="mx-auto mt-2 w-20 md:w-40 pb-5 translate-x-24 sm:translate-x-30 rotate-20"
               animate={{ y: [0, -8, 0] }}
               transition={{
                 duration: 1.8,
@@ -248,7 +248,7 @@ const WorkCards = ({
                 repeat: Infinity,
               }}
             />
-            <h1 className="text-3xl text-center epilogue font-extrabold">
+            <h1 className="text-4xl sm:text-6xl text-center shadow-font font-extrabold pb-10">
               {title}
             </h1>
           </>
