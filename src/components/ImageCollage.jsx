@@ -10,6 +10,7 @@ import collage4 from "../assets/images/collage4.avif";
 import blueDoodle from "../assets/svgs/blue-doodle3.svg";
 
 import plan1 from "../assets/images/plan1.png"
+import plan2 from "../assets/images/plan2.png"
 
 // Register the GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -25,7 +26,7 @@ const imageData = [
     rotation: -6, // degrees
   },
   {
-    src: plan1,
+    src: plan2,
     alt: "Man in a wizard hat",
     tag: "mainstream is not a dirty word",
     tagColor: "bg-orange-500",

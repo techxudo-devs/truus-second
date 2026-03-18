@@ -164,7 +164,7 @@ const Carousel_002 = ({
                                         {image.title}
                                     </motion.p>
                                 )}
-                                {
+                                {/* {
                                     image.sticker1 && (
                                         <motion.img
                                             src={image.sticker1}
@@ -192,7 +192,7 @@ const Carousel_002 = ({
                                             {image.sticker2}
                                         </motion.div>
                                     )
-                                }
+                                } */}
                             </div>
                         )}
                     </SwiperSlide>

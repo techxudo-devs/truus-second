@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MenuIcon, X, Phone, Mail } from "lucide-react";
+import { MenuIcon, X, Phone, Mail, Contact2 } from "lucide-react";
 import {
   FaWhatsapp,
   FaInstagram,
@@ -37,8 +37,15 @@ const Navbar = () => {
   const slideEase = [0.76, 0, 0.24, 1] as const;
 
   const socialIcons = [
-    { id: 1, icon: <FaInstagram size={18} />, x: 25, y: -60, delay: 0.05 },
-    { id: 2, icon: <FaLinkedinIn size={18} />, x: -30, y: -60, delay: 0.1 },
+    {
+      id: 1,
+      icon: <FaInstagram size={18} />,
+      x: 25,
+      y: -60,
+      delay: 0.05,
+      href: "https://www.instagram.com/thesyncevents",
+    },
+    { id: 2, icon: <Contact2 size={18} />, x: -30, y: -60, delay: 0.1 },
     { id: 3, icon: <FaWhatsapp size={18} />, x: -65, y: -20, delay: 0.15 },
     { id: 4, icon: <Mail size={18} />, x: -55, y: 30, delay: 0.2 },
   ];
@@ -137,17 +144,25 @@ const Navbar = () => {
               </nav>
 
               <div className="flex items-center gap-1 sm:gap-2">
-                {[FaInstagram, FaTiktok, FaPinterestP, FaLinkedinIn].map(
-                  (Icon, idx) => (
-                    <a
-                      key={idx}
-                      href="#"
-                      className="text-white border-2 border-white rounded-full p-1.5 lg:p-2.5 hover:bg-white hover:text-[#022c4d] transition-colors duration-300"
-                    >
-                      <Icon size={20} />
-                    </a>
-                  ),
-                )}
+                {[
+                  {
+                    icon: FaInstagram,
+                    href: "https://www.instagram.com/thesyncevents",
+                  },
+                  { icon: FaWhatsapp, href: "#" },
+                  { icon: Phone, href: "#" },
+                  { icon: Mail, href: "#" },
+                ].map(({ icon: Icon, href }, idx) => (
+                  <a
+                    key={idx}
+                    href={href}
+                    target={href !== "#" ? "_blank" : undefined}
+                    rel={href !== "#" ? "noreferrer" : undefined}
+                    className="text-white border-2 border-white rounded-full p-1.5 lg:p-2.5 hover:bg-white hover:text-[#022c4d] transition-colors duration-300"
+                  >
+                    <Icon size={20} />
+                  </a>
+                ))}
               </div>
             </motion.div>
             <motion.div
@@ -181,7 +196,9 @@ const Navbar = () => {
             socialIcons.map((item) => (
               <motion.a
                 key={item.id}
-                href="#"
+                href={item.href ?? "#"}
+                target={item.href ? "_blank" : undefined}
+                rel={item.href ? "noreferrer" : undefined}
                 // SLIDING LOGIC: Start from 0,0 and slide back to 0,0 on exit
                 initial={{ x: 0, y: 0, opacity: 0, scale: 0 }}
                 animate={{ x: item.x, y: item.y, opacity: 1, scale: 1 }}

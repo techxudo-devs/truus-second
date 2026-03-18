@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 
 // Import doodles and assets
 import logo from "../assets/svgs/logo.svg";
@@ -13,6 +13,22 @@ import sticker100 from "../assets/svgs/heart2.svg";
 import stickerCamera from "../assets/svgs/camera.svg";
 
 const Footer = () => {
+  const openGmailCompose = (email) => {
+    const width = 800;
+    const height = 600;
+    const left = Math.max(0, Math.round((window.innerWidth - width) / 2));
+    const top = Math.max(0, Math.round((window.innerHeight - height) / 2));
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+      email,
+    )}`;
+
+    window.open(
+      gmailUrl,
+      "_blank",
+      `width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=yes`,
+    );
+  };
+
   return (
     // Responsive padding on the main footer element
     <footer
@@ -29,7 +45,7 @@ const Footer = () => {
               services
             </div>
             {/* Responsive font size */}
-            <h3 className="text-2xl md:text-3xl font-extrabold">
+            <h3 className="text-lg md:text-xl font-extrabold man">
               music marketing <br />
               campaign strategy
             </h3>
@@ -41,7 +57,7 @@ const Footer = () => {
               studio
             </div>
             {/* Responsive font size */}
-            <h3 className="text-2xl md:text-3xl font-extrabold">
+            <h3 className="text-lg md:text-xl font-extrabold man">
               live shows <br /> brand activations
             </h3>
             <p className="text-lg">touring, PR &amp; digital rollout</p>
@@ -53,8 +69,23 @@ const Footer = () => {
               contact
             </div>
             {/* Responsive font size */}
-            <h3 className="text-2xl md:text-3xl font-extrabold">
-              hello@sync.co <br />
+            <h3 className="text-lg md:text-xl font-extrabold man">
+              <button
+                type="button"
+                onClick={() => openGmailCompose("hm.osamakhan@thesyncevents.com")}
+                className="underline underline-offset-4"
+              >
+                hm.osamakhan@thesyncevents.com
+              </button>
+              <br />
+              <button
+                type="button"
+                onClick={() => openGmailCompose("qasimazhar@thesyncevents.com")}
+                className="underline underline-offset-4"
+              >
+                qasimazhar@thesyncevents.com
+              </button>
+              <br />
               <a href="#" className="underline underline-offset-4">
                 book an artist
               </a>
@@ -63,14 +94,11 @@ const Footer = () => {
               we respond fast for tours, campaigns, and launches.
             </p>
             <div className="flex items-center gap-4 pt-2">
-              <a href="#" aria-label="LinkedIn">
-                <FaLinkedin size={28} />
+              <a href="#" aria-label="Whatsapp">
+                <FaWhatsapp size={28} />
               </a>
-              <a href="#" aria-label="Instagram">
+              <a href="https://www.instagram.com/thesyncevents" target="_blank" aria-label="Instagram">
                 <FaInstagram size={28} />
-              </a>
-              <a href="#" aria-label="TikTok">
-                <FaTiktok size={28} />
               </a>
               <p className="text-right pl-6 text-xs man">
                 Developed By{" "}
