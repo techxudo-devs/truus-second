@@ -51,32 +51,23 @@ const PreLoader = ({ isVisible }) => {
           </div>
 
           <div className="relative flex h-full flex-col items-center justify-center px-6">
-            <div className="relative flex items-center justify-center">
-              <motion.div
-                className="absolute h-36 w-36 rounded-full border border-white/15"
-                animate={{ scale: [1, 1.18, 1], opacity: [0.45, 0.12, 0.45] }}
-                transition={pulseTransition}
-              />
-              <motion.div
-                className="absolute h-52 w-52 rounded-full border border-white/8"
-                animate={{ scale: [0.94, 1.08, 0.94], rotate: [0, 90, 180] }}
-                transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
-              />
-              <motion.div
-                className="rounded-[2rem] border border-white/20 bg-white/8 px-8 py-7 backdrop-blur-xl shadow-[0_20px_80px_rgba(0,0,0,0.28)]"
-                initial={{ y: 16, opacity: 0.7, scale: 0.96 }}
-                animate={{ y: [0, -6, 0], opacity: 1, scale: 1 }}
-                transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <motion.img
-                  src="/synclogo2.svg"
-                  alt="Sync Events"
-                  className="w-44 sm:w-56"
-                  animate={{ filter: ["drop-shadow(0 0 0 rgba(255,255,255,0.1))", "drop-shadow(0 0 18px rgba(255,255,255,0.28))", "drop-shadow(0 0 0 rgba(255,255,255,0.1))"] }}
-                  transition={pulseTransition}
-                />
-              </motion.div>
-            </div>
+            <motion.img
+              src="/synclogo2.svg"
+              alt="Sync Events"
+              className="w-44 sm:w-56"
+              initial={{ y: 16, opacity: 0.7, scale: 0.96 }}
+              animate={{
+                y: [0, -6, 0],
+                opacity: 1,
+                scale: 1,
+                filter: [
+                  "drop-shadow(0 0 0 rgba(255,255,255,0.1))",
+                  "drop-shadow(0 0 18px rgba(255,255,255,0.28))",
+                  "drop-shadow(0 0 0 rgba(255,255,255,0.1))",
+                ],
+              }}
+              transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+            />
 
             <motion.p
               className="shadow-font mt-10 text-center text-sm font-semibold uppercase text-white/80"
