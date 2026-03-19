@@ -156,7 +156,7 @@ const Projects = () => {
         <section
             id="projects"
             data-navbar-theme="dark"
-            className="relative w-full bg-gradient-to-t from-[#015696] to-[#00192b] text-white overflow-hidden flex flex-col justify-center p-6 md:p-8 min-h-screen"
+            className="relative w-full bg-gradient-to-t from-[#015696] to-[#00192b] text-white overflow-hidden flex flex-col justify-center p-6 md:p-8 pt-10 sm:min-h-screen"
             onMouseMove={handleCursorMove}
             onMouseLeave={() => {
                 cursorActiveRef.current = false;
@@ -186,7 +186,7 @@ const Projects = () => {
                 />
             </div>
 
-            <div className='flex flex-col gap-2 items-center mb-6 -translate-y-8 mt-0 sm:mt-8'>
+            <div className='flex flex-col gap-2 items-center mb-6 mt-10 sm:mt-8'>
                 <Link
                     to="/work"
                     onClick={() => window.scrollTo(0, 0)}
